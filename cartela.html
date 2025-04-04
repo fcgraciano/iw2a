@@ -19,14 +19,14 @@
     </thead>
     <tbody>
         <tr>
-          <td id="b1">12</td><!--B-->
+          <td id="b1" onclick="MarcarCartela(this)" >12</td><!--B-->
           <td id="i1">30</td><!--I-->
           <td id="n1">33</td><!--N-->
           <td id="g1">51</td><!--G-->
           <td id="o1">69</td><!--O-->
         </tr>
         <tr>
-          <td id="b2">9</td><!--B-->
+          <td id="b2">9</td> <!--B-->
           <td id="i2">24</td><!--I-->
           <td id="n2">45</td><!--N-->
           <td id="g2">59</td><!--G-->
@@ -55,11 +55,36 @@
         </tr>
     </tbody>
   </table>  
+  
+  <br />
 
-
+  <button id="botao" onclick="Piscar()" >
+    Piscando o Botão 
+  </button>
   <script>
+    function Piscar()
+    {
+      var botao = document.getElementById("botao");
+      if(botao.style.backgroundColor == 'red')
+      {
+        botao.style.backgroundColor = 'blue';
+      }else{
+        botao.style.backgroundColor = 'red';
+      }
+    }
 
-
+    function MarcarCartela(td)
+    {
+      if(td.style.backgroundColor != 'black')
+      {
+        td.style.backgroundColor = 'black';
+        td.style.color = "white";
+      }else{
+        td.style.backgroundColor = '';
+        td.style.color = "black";
+      }
+        
+    }
 
   </script>
 
