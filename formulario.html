@@ -28,6 +28,27 @@
         </button>
     </form>
 
+    <script>
+    function Clicar()
+    {    
+        var cep = document.getElementById("cep")
+        var url = "https://viacep.com.br/ws/"+cep.value+"/json/"
+        fetch(url)
+        .then((resposta)=> resposta.json())
+        .then((dados) => {
+            var cidade  = document.getElementById("cidade")
+            var estado  = document.getElementById("estado")
+            var endereco  = document.getElementById("endereco")
+            var bairro  = document.getElementById("bairro")
+            cidade.value = dados.localidade
+            estado.value = dados.estado
+            bairro.value = dados.bairro
+            endereco.value = dados.logradouro
+            
+        })
+    }
+    </script>
+
 
 </body>
 </html>
