@@ -1,49 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
-    <link rel="stylesheet" href="estilo.css" />
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .bg-personalizado{
+            background-color: brown;
+        }
+        .dropdown-item:hover, .dropdown-item.active {
+            background-color: black;
+            color: white;
+        }
+        .navbar-toggler-icon {
+            background-color: white; /* Mudando a cor de fundo para branco */
+        }
+        /* div{
+          text-align: center;
+          border: 1px solid;
+          font-size: 30pt;
+        } */
+    </style>
 </head>
 <body>
-    <h1>Página Inicial</h1>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Uma opção do menu</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-success" type="submit">
+                    Pesquisar
+                </button>
+            </form>
+          </div>
+        </div>
+      </nav>
 
-<div>
-    <img src="imagens/anel-diamante.png" />
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+       
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6"></div>
+    <div class="col-6"></div>
+  </div>
+  
+  <div class="row">
+    <div class="col-4"> jahfu io poih oipu hiouh oiu iouh oiuh iou yh uhi uhiou hiuh ou h</div>
+    <div class="col-4">
+      <br>
+      <div class="card">
+        <div class="card-header">
+          Bem vindo ao site
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+                <label for="email">Endereço de e-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="lembrarSenha">
+                <label class="form-check-label" for="lembrarSenha">Lembrar-me</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Entrar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-4"></div>
+  </div>
+  
 </div>
 
-<div>
-    <img src="imagens/borboleta-charme.png" />
-</div>
-
-<div>
-    <img src="imagens/bracelete-ouro-cravejado.png" />
-</div>
-
-<div>
-    <img src="imagens/brinco-coracao.png" />
-</div>
-<div>
-    <img src="imagens/colar-do-infinito.png" />
-</div>
-<div>
-    <img src="imagens/iphone.webp" />
-</div>
-<div>
-    <img src="imagens/memoria-ram.webp" />
-</div>
-
-<div>
-    <img src="imagens/notebook.webp" />
-</div>
-
-<div>
-    <img src="imagens/placa-video.webp" />
-</div>
-<div>
-    <img src="imagens/play5.webp" />
-</div>
 
 
 
@@ -52,5 +114,28 @@
 
 
 
+
+
+
+
+      <br />
+      <div class="alert alert-success" role="alert">
+       Cadastrado com sucesso
+      </div>
+
+
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    
+    <button type="button" class="btn btn-link">Link</button>
+
+
+    <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
